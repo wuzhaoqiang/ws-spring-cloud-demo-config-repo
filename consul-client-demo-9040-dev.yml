@@ -17,4 +17,4 @@ spring:
         enabled: true
       healthCheckPath: ${management.context-path}/health
 test:
-  test_hello_1
+  test_hello_1dfsdfsadfkaskfjakjfklsajdkajasfklasj
