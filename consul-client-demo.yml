@@ -2,7 +2,7 @@ server:
   port: 9040
 spring:
   application:
-    name: consul-client-demo-9040t
+    name: consul-client-demo-9040
   cloud:
     consul:
       host: localhost
