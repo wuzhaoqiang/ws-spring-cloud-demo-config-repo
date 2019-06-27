@@ -1,0 +1,12 @@
+server:
+  port: 9040
+spring:
+  application:
+    name: consul-client-demo-9040test1312312
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        instance-id: ${spring.application.name}-${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
+      healthCheckPath: ${management.context-path}/health
