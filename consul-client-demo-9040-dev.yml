@@ -4,6 +4,8 @@ spring:
   application:
     name: consul-client-demo-9040
   cloud:
+    devtools:
+      add-properties: true
     config:
       discovery:
         service-id: ws-config-9050
