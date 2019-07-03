@@ -1,0 +1,24 @@
+server:
+  port: 9100
+spring:
+  application:
+    name: gateway
+  cloud:
+    config:
+      discovery:
+        service-id: config
+        enabled: true
+      profile: dev
+      fail-fast: true
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        instance-id: ${spring.application.name}-${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
+        enabled: true
+      healthCheckPath: ${management.context-path}/health
+zuul:
+  routes:
+    demo:
+      path: /demo/**
+      serviceId: consul-client-demo-9040
