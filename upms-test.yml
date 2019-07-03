@@ -16,7 +16,6 @@ spring:
       discovery:
         instance-id: ${spring.application.name}-${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
         enabled: true
-      healthCheckPath: actuator/health
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
