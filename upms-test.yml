@@ -8,7 +8,7 @@ spring:
       discovery:
         service-id: config
         enabled: true
-      profile: dev
+      profile: test
       fail-fast: true
     consul:
       host: localhost
