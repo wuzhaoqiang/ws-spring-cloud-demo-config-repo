@@ -1,0 +1,19 @@
+server:
+  port: 9300
+spring:
+  application:
+    name: auth
+  cloud:
+    config:
+      discovery:
+        service-id: config
+        enabled: true
+      profile: test
+      fail-fast: true
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        instance-id: ${spring.application.name}-${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
+        enabled: true
+      healthCheckPath: ${management.context-path}/health
