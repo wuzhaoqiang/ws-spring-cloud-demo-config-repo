@@ -17,7 +17,7 @@ spring:
         instance-id: ${spring.application.name}-${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
         enabled: true
       healthCheckPath: ${management.context-path}/health
-datasource:
+  datasource:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: root
@@ -32,5 +32,5 @@ datasource:
       auto-commit: true # 配置从池返回的连接的默认自动提交行为
       pool-name: DatebookHikariCP
       connection-test-query: SELECT 1
-    jpa:
-      show-sql: true
+  jpa:
+    show-sql: true
