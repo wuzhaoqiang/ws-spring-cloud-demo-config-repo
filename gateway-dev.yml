@@ -22,6 +22,6 @@ zuul:
     myupms:
       path: /myupms/**
       serviceId: upms
-   myauth:
+    myauth:
       path: /myauth/**
       serviceId: auth
