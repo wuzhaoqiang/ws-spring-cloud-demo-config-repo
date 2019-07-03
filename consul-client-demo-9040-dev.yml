@@ -18,5 +18,4 @@ spring:
         instance-id: ${spring.application.name}-${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
         enabled: true
       healthCheckPath: ${management.context-path}/health
-test:
-  test_hello_111121312132
+test: test_hello_111121312132
