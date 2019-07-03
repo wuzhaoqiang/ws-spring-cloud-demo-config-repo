@@ -1,5 +1,5 @@
 server:
-  port: 90780
+  port: 9040
 spring:
   application:
     name: consul-client-demo-9040
